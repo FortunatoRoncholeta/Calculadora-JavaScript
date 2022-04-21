@@ -21,25 +21,25 @@
                 <!--Primeira linha  -->
                 <tr>
                     <td><button onclick="clean()">C</button></td>
-                    <td><button onclick="insert('%')" >%</button>
+                    <td><button onclick="insert('%')">%</button>
                     </td>
-                   <!--sinal de apagaar -->
-                    <td><button  onclick="back()"> &lt</button></td>
+                    <!--sinal de apagaar -->
+                    <td><button onclick="back()"> &lt</button></td>
                     <td><button onclick="insert('/')">/</button></td>
                 </tr>
                 <!--Segunda linha  -->
                 <tr>
                     <td><button onclick="insert('7')">7</button></td>
-                    <td><button onclick="insert('8')" >8</button> </td>
-                    <td><button  onclick="insert('8')">9</button></td>
-                    <td><button onclick="insert('*')" >X</button></td>
+                    <td><button onclick="insert('8')">8</button> </td>
+                    <td><button onclick="insert('8')">9</button></td>
+                    <td><button onclick="insert('*')">X</button></td>
                 </tr>
-  <!--Terceira linha  -->
+                <!--Terceira linha  -->
                 <tr>
                     <td><button onclick="insert('4')">4</button></td>
                     <td><button onclick="insert('5')">5</button></td>
                     <td><button onclick="insert('6')">6</button></td>
-                    <td><button onclick="insert('-')" >-</button></td>
+                    <td><button onclick="insert('-')">-</button></td>
                 </tr>
 
                 <!--Quarta linha  -->
@@ -47,23 +47,23 @@
                     <td><button onclick="insert('1')">1</button></td>
                     <td><button onclick="insert('2')">2</button></td>
                     <td><button onclick="insert('3')">3</button></td>
-                    <td><button  onclick="insert('+')">+</button></td>
+                    <td><button onclick="insert('+')">+</button></td>
                 </tr>
 
-                 <!--Quinta linha  -->
-                 <tr>
-                    <td><button >0.0</button></td>
-                    <td><button >000</button></td>
-                    <td><button >00</button></td>
-                      <!--espandir coluna -->
-                    <td rowspan="2"><button class="igual" onclick="calc()" >=</button></td>
+                <!--Quinta linha  -->
+                <tr>
+                    <td><button>0.0</button></td>
+                    <td><button>000</button></td>
+                    <td><button>00</button></td>
+                    <!--espandir coluna -->
+                    <td rowspan="2"><button class="igual" onclick="calc()">=</button></td>
                 </tr>
 
                 <!--Sexta linha  -->
                 <tr>
-                     <!--espandir linha -->
-                    <td colspan="2" ><button class="zero" onclick="insert('0')" >0</button></td>
-                    <td><button onclick="insert('.')" >.</button></td>
+                    <!--espandir linha -->
+                    <td colspan="2"><button class="zero" onclick="insert('0')">0</button></td>
+                    <td><button onclick="insert('.')">.</button></td>
                 </tr>
 
             </table>
@@ -73,38 +73,38 @@
         </div>
     </div>
     <script>
-        function insert(num){
-     // pega o numero da Tabela (calculadora ) e joga no campo do resultado 
+        function insert(num) {
+            // pega o numero da Tabela (calculadora ) e joga no campo do resultado 
             var numero = document.getElementById('resultado').innerHTML;
-            document.getElementById('resultado').innerHTML = numero+num;
+            document.getElementById('resultado').innerHTML = numero + num;
 
         }
-        function clean(){
-// LIMPA RESULTADO
-            document.getElementById('resultado').innerHTML ="";
+        function clean() {
+            // LIMPA RESULTADO
+            document.getElementById('resultado').innerHTML = "";
         }
 
-        function calc(){
-     // pega o numero da Tabela (calculadora ) e faz o calculo 
+        function calc() {
+            // pega o numero da Tabela (calculadora ) e faz o calculo 
             var resultado = document.getElementById('resultado').innerHTML;
-            if(resultado){
+            if (resultado) {
                 // eval faz a funçao da calculadora baseado nos simbolos que ele pega
                 document.getElementById('resultado').innerHTML = eval(resultado);
             }
 
             else
-            document.getElementById('resultado').innerHTML = "Campo Vazio"
-            
-            
-            
+                document.getElementById('resultado').innerHTML = "Campo Vazio"
+
+
+
 
         }
 
-        function back(){
+        function back() {
 
             var resultado = document.getElementById('resultado').innerHTML;
             // apaga os numero , length vai ler oque tem na Tag e apaga d traz pra frente
-            document.getElementById('resultado').innerHTML= resultado.substring(0,resultado.length -1)
+            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length - 1)
         }
 
     </script>

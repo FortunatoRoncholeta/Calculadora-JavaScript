@@ -19,7 +19,7 @@
 .calculadora {
 
     position: absolute;
-    background-color: rgb(0, 0, 0,0.6);
+    background-color: rgb(0, 0, 0, 0.6);
     top: 50%;
     left: 50%;
     /*centralizar 100% no centro */
@@ -52,11 +52,11 @@ button.igual {
     height: 106px;
 }
 
-button.zero{
+button.zero {
     width: 106px;
 }
 
-#resultado{
+#resultado {
 
     width: 207px;
     height: 30px;
